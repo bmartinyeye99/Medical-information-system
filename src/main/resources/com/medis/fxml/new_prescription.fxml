@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medis.controllers.NewPrescription">
+    <center>
+        <AnchorPane prefHeight="610.0" prefWidth="586.0" style="-fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+            <Label fx:id="patientNamePrescriptionTitle" layoutX="279.0" layoutY="84.0" prefHeight="43.0" prefWidth="368.0" text="Patient name - New prescription">
+                <font>
+                    <Font size="25.0" />
+                </font>
+            </Label>
+            <Label layoutX="248.0" layoutY="156.0" prefHeight="25.0" prefWidth="134.0" text="%prescription.title">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+         <TextField fx:id="titleData" layoutX="424.0" layoutY="156.0" prefHeight="25.0" prefWidth="231.0" />
+         <Label layoutX="248.0" layoutY="202.0" prefHeight="25.0" prefWidth="134.0" text="%prescription.description">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextArea fx:id="descriptionData" layoutX="424.0" layoutY="202.0" prefHeight="75.0" prefWidth="231.0" />
+         <Label layoutX="248.0" layoutY="294.0" prefHeight="25.0" prefWidth="134.0" text="%prescription.drug">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="drugData" layoutX="424.0" layoutY="294.0" prefHeight="25.0" prefWidth="231.0" />
+         <Label layoutX="248.0" layoutY="340.0" prefHeight="25.0" prefWidth="140.0" text="%prescription.expiration">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <DatePicker fx:id="expDateYmdData" layoutX="424.0" layoutY="340.0" prefHeight="25.0" prefWidth="231.0" />
+         <Label layoutX="248.0" layoutY="389.0" prefHeight="25.0" prefWidth="134.0" text="%prescription.notes">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextArea fx:id="notesData" layoutX="424.0" layoutY="389.0" prefHeight="75.0" prefWidth="231.0" />
+            <Button layoutX="248.0" layoutY="491.0" mnemonicParsing="false" onAction="#createPrescription" prefHeight="35.0" prefWidth="190.0" style="-fx-background-color: #1E90FF;" text="%prescription.create">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="463.0" layoutY="491.0" mnemonicParsing="false" onAction="#switchToPrescriptions" prefHeight="35.0" prefWidth="190.0" text="%prescription.cancel">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+         <Label fx:id="missingValuesMsg" layoutX="350.0" layoutY="127.0" prefHeight="17.0" prefWidth="202.0" textFill="RED" />
+        </AnchorPane>
+    </center>
+</BorderPane>

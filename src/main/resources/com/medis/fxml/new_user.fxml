@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medis.controllers.NewUser">
+    <center>
+        <AnchorPane prefHeight="610.0" prefWidth="586.0" style="-fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+            <Label layoutX="389.0" layoutY="44.0" prefHeight="43.0" prefWidth="237.0" text="%user.new">
+                <font>
+                    <Font size="25.0" />
+                </font>
+            </Label>
+         <Label layoutX="256.0" layoutY="122.0" prefHeight="25.0" prefWidth="134.0" text="%user.firstName">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="firstNameData" layoutX="467.0" layoutY="122.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="256.0" layoutY="168.0" prefHeight="25.0" prefWidth="140.0" text="%user.lastName">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="lastNameData" layoutX="467.0" layoutY="168.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="256.0" layoutY="214.0" prefHeight="25.0" text="%user.username">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="usernameData" layoutX="467.0" layoutY="214.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="256.0" layoutY="260.0" prefHeight="25.0" prefWidth="140.0" text="%user.password">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="passwordData" layoutX="467.0" layoutY="260.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="256.0" layoutY="306.0" prefHeight="25.0" text="%user.email">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="emailData" layoutX="467.0" layoutY="306.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="256.0" layoutY="352.0" prefHeight="25.0" text="%user.phone">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="phoneData" layoutX="467.0" layoutY="352.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="256.0" layoutY="398.0" prefHeight="25.0" text="%user.position">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="positionData" layoutX="467.0" layoutY="398.0" prefHeight="25.0" prefWidth="177.0" promptText="%user.position" />
+         <Label layoutX="256.0" layoutY="444.0" prefHeight="25.0" text="%user.birthDate">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <DatePicker fx:id="birthDateData" layoutX="467.0" layoutY="443.0" prefHeight="26.0" prefWidth="177.0" />
+            <Button layoutX="253.0" layoutY="530.0" mnemonicParsing="false" onAction="#createUser" prefHeight="35.0" prefWidth="190.0" style="-fx-background-color: #1E90FF;" text="%user.create">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="458.0" layoutY="530.0" mnemonicParsing="false" onAction="#switchToUsers" prefHeight="35.0" prefWidth="190.0" text="%user.cancel">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+         <Label fx:id="missingValuesMsg" layoutX="347.0" layoutY="93.0" prefHeight="17.0" prefWidth="202.0" textFill="RED" />
+        </AnchorPane>
+    </center>
+</BorderPane>

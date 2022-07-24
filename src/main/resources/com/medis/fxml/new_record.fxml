@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medis.controllers.NewRecord">
+    <center>
+        <AnchorPane prefHeight="610.0" prefWidth="586.0" style="-fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+            <Label fx:id="patientNameNewRecord" layoutX="249.0" layoutY="55.0" prefHeight="43.0" prefWidth="405.0" text="Patient name - New record">
+                <font>
+                    <Font size="25.0" />
+                </font>
+            </Label>
+            <Label layoutX="249.0" layoutY="131.0" prefHeight="25.0" prefWidth="134.0" text="%records.title">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+         <TextField fx:id="titleData" layoutX="425.0" layoutY="131.0" prefHeight="25.0" prefWidth="229.0" />
+            <Label layoutX="249.0" layoutY="177.0" prefHeight="25.0" prefWidth="140.0" text="%records.date">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+         <DatePicker fx:id="dateData" layoutX="425.0" layoutY="177.0" prefWidth="229.0" />
+            <Label layoutX="249.0" layoutY="223.0" prefHeight="25.0" text="%records.description">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+         <TextArea fx:id="descriptionData" layoutX="425.0" layoutY="223.0" prefHeight="115.0" prefWidth="229.0" />
+            <Label layoutX="249.0" layoutY="361.0" prefHeight="25.0" text="%records.notes">
+                <font>
+                    <Font name="System Bold" size="13.0" />
+                </font>
+            </Label>
+         <TextArea fx:id="notesData" layoutX="425.0" layoutY="362.0" prefHeight="115.0" prefWidth="229.0" />
+            <Button layoutX="249.0" layoutY="521.0" mnemonicParsing="false" onAction="#createRecord" prefHeight="35.0" prefWidth="190.0" style="-fx-background-color: #1E90FF;" text="%records.create">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="463.0" layoutY="521.0" mnemonicParsing="false" onAction="#switchToRecords" prefHeight="35.0" prefWidth="190.0" text="%records.cancel">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+         <Label fx:id="missingValuesMsg" layoutX="387.0" layoutY="98.0" prefHeight="17.0" prefWidth="202.0" textFill="RED" />
+        </AnchorPane>
+    </center>
+</BorderPane>

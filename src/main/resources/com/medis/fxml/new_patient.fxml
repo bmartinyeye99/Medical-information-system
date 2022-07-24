@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medis.controllers.NewPatient">
+    <center>
+        <AnchorPane prefHeight="610.0" prefWidth="586.0" style="-fx-background-color: #F5F5F5;" BorderPane.alignment="CENTER">
+            <Label layoutX="389.0" layoutY="44.0" prefHeight="43.0" prefWidth="237.0" text="%patients.new">
+                <font>
+                    <Font size="25.0" />
+                </font>
+            </Label>
+         <Label layoutX="254.0" layoutY="109.0" prefHeight="25.0" prefWidth="134.0" text="%patients.firstname">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="firstNameData" layoutX="465.0" layoutY="109.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="254.0" layoutY="155.0" prefHeight="25.0" prefWidth="140.0" text="%patients.lastname">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="lastNameData" layoutX="465.0" layoutY="155.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="254.0" layoutY="201.0" prefHeight="25.0" prefWidth="140.0" text="%patientInfo.insurance">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="insuranceCoData" layoutX="465.0" layoutY="201.0" prefHeight="25.0" prefWidth="177.0" promptText="%patientInfo.insurance" />
+         <Label layoutX="254.0" layoutY="247.0" prefHeight="25.0" text="%patientInfo.birthId">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="birthIdData" layoutX="465.0" layoutY="247.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="254.0" layoutY="293.0" prefHeight="25.0" text="%patientInfo.sex">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="sexData" layoutX="465.0" layoutY="293.0" prefHeight="25.0" prefWidth="177.0" promptText="%patientInfo.sex" />
+         <Label layoutX="254.0" layoutY="339.0" prefHeight="25.0" text="%patientInfo.bloodGroup">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <ComboBox fx:id="bloodGroupData" layoutX="465.0" layoutY="339.0" prefHeight="25.0" prefWidth="177.0" promptText="%patientInfo.bloodGroup" />
+         <Label layoutX="254.0" layoutY="385.0" prefHeight="25.0" text="%patientInfo.address">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="addressData" layoutX="465.0" layoutY="385.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="254.0" layoutY="431.0" prefHeight="25.0" text="%patientInfo.phone">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="phoneData" layoutX="465.0" layoutY="431.0" prefHeight="25.0" prefWidth="177.0" />
+         <Label layoutX="254.0" layoutY="477.0" prefHeight="25.0" text="%patientInfo.email">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </Label>
+         <TextField fx:id="emailData" layoutX="465.0" layoutY="477.0" prefHeight="25.0" prefWidth="177.0" />
+            <Button layoutX="253.0" layoutY="520.0" mnemonicParsing="false" onAction="#createPatient" prefHeight="35.0" prefWidth="390.0" style="-fx-background-color: #1E90FF;" text="%patientInfo.create">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+            <Button layoutX="253.0" layoutY="565.0" mnemonicParsing="false" onAction="#switchToPatients" prefHeight="35.0" prefWidth="390.0" text="%patientInfo.cancel">
+                <font>
+                    <Font name="System Bold" size="12.0" />
+                </font>
+            </Button>
+         <Label fx:id="missingValuesMsg" layoutX="347.0" layoutY="93.0" prefHeight="17.0" prefWidth="202.0" textFill="RED" />
+         <Button layoutX="40.0" layoutY="520.0" mnemonicParsing="false" onAction="#handleInputData" prefHeight="80.0" prefWidth="190.0" style="-fx-background-color: #1E90FF;" text="%patientInfo.import">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </Button>
+        </AnchorPane>
+    </center>
+</BorderPane>
